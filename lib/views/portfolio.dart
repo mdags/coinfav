@@ -37,15 +37,17 @@ class _PortfolioPageState extends State<PortfolioPage> {
     setState(() {
       _isLoading = true;
     });
-    var concet = StringBuffer();
-    final data = await _db.collection('favs').get();
-    data!.forEach((key, value) {
-      final item = FavoritesModel.fromMap(value);
-      _items.putIfAbsent(item.id, () => item);
-      concet.write(item.name + ',');
-    });
-    if (concet.isNotEmpty) {
-      try {
+    try {
+      var concet = StringBuffer();
+      final data = await _db.collection('favs').get();
+      if (data != null) {
+        data.forEach((key, value) {
+          final item = FavoritesModel.fromMap(value);
+          _items.putIfAbsent(item.id, () => item);
+          concet.write(item.name + ',');
+        });
+      }
+      if (concet.isNotEmpty) {
         var data = await ApiProvider.fetchAssets(concet.toString());
         if (data != null) {
           _list = data;
@@ -61,11 +63,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
           }
           if (stream) listenWebSocket();
         }
-      } finally {
-        setState(() {
-          _isLoading = false;
-        });
       }
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
     }
   }
 

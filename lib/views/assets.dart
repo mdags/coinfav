@@ -92,14 +92,16 @@ class _AssetsPageState extends State<AssetsPage> {
   void addFavorites(String value) async {
     bool exists = false;
     final favs = await _db.collection('favs').get();
-    favs!.forEach((k, v) {
-      final item = FavoritesModel.fromMap(v);
-      if (item.name == value) {
-        exists = true;
-        item.delete();
-        _items.remove(item.id);
-      }
-    });
+    if (favs != null) {
+      favs.forEach((k, v) {
+        final item = FavoritesModel.fromMap(v);
+        if (item.name == value) {
+          exists = true;
+          item.delete();
+          _items.remove(item.id);
+        }
+      });
+    }
     if (!exists) {
       final id = Localstore.instance.collection('favs').doc().id;
       final now = DateTime.now();
