@@ -1,0 +1,651 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/coinfav/models/exchanges_model.dart', 'packages/coinfav/providers/api_provider.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/material/progress_indicator.dart', 'packages/flutter_staggered_grid_view/src/widgets/staggered_grid_view.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter_staggered_grid_view/src/widgets/staggered_tile.dart', 'packages/flutter/src/material/elevated_button.dart', 'packages/flutter/src/material/page.dart', 'packages/coinfav/views/markets.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/alignment.dart', 'packages/coinfav/views/variables.dart', 'packages/flutter/src/painting/rounded_rectangle_border.dart', 'packages/flutter/src/painting/border_radius.dart'], (function load__packages__coinfav__views__exchanges_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__coinfav__models__exchanges_model$46dart, packages__coinfav__providers__api_provider$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__material__progress_indicator$46dart, packages__flutter_staggered_grid_view__src__widgets__staggered_grid_view$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter_staggered_grid_view__src__widgets__staggered_tile$46dart, packages__flutter__src__material__elevated_button$46dart, packages__flutter__src__material__page$46dart, packages__coinfav__views__markets$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__alignment$46dart, packages__coinfav__views__variables$46dart, packages__flutter__src__painting__rounded_rectangle_border$46dart, packages__flutter__src__painting__border_radius$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const async = dart_sdk.async;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const exchanges_model = packages__coinfav__models__exchanges_model$46dart.models__exchanges_model;
+  const api_provider = packages__coinfav__providers__api_provider$46dart.providers__api_provider;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const progress_indicator = packages__flutter__src__material__progress_indicator$46dart.src__material__progress_indicator;
+  const staggered_grid_view = packages__flutter_staggered_grid_view__src__widgets__staggered_grid_view$46dart.src__widgets__staggered_grid_view;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const staggered_tile = packages__flutter_staggered_grid_view__src__widgets__staggered_tile$46dart.src__widgets__staggered_tile;
+  const elevated_button = packages__flutter__src__material__elevated_button$46dart.src__material__elevated_button;
+  const page = packages__flutter__src__material__page$46dart.src__material__page;
+  const markets = packages__coinfav__views__markets$46dart.views__markets;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const alignment = packages__flutter__src__painting__alignment$46dart.src__painting__alignment;
+  const variables = packages__coinfav__views__variables$46dart.views__variables;
+  const rounded_rectangle_border = packages__flutter__src__painting__rounded_rectangle_border$46dart.src__painting__rounded_rectangle_border;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  var exchanges = Object.create(dart.library);
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  var $toStringAsFixed = dartx.toStringAsFixed;
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    JSArrayOfExchangesModel: () => (T.JSArrayOfExchangesModel = dart.constFn(_interceptors.JSArray$(exchanges_model.ExchangesModel)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    BuildContextAndintToWidget: () => (T.BuildContextAndintToWidget = dart.constFn(dart.fnType(framework.Widget, [framework.BuildContext, core.int])))(),
+    intToStaggeredTile: () => (T.intToStaggeredTile = dart.constFn(dart.fnType(staggered_tile.StaggeredTile, [core.int])))(),
+    BuildContextToMarketsPage: () => (T.BuildContextToMarketsPage = dart.constFn(dart.fnType(markets.MarketsPage, [framework.BuildContext])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 21,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], widget_inspector._Location);
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 40,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], widget_inspector._Location);
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 15,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 15,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9], widget_inspector._Location);
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 9,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "actions",
+        [_Location_column]: 9,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13], widget_inspector._Location);
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 40,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([], widget_inspector._Location);
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 20,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.constList([C[18] || CT.C18], widget_inspector._Location);
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[17] || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21, C[22] || CT.C22], widget_inspector._Location);
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: edge_insets.EdgeInsets.prototype,
+        [EdgeInsets_bottom]: 8,
+        [EdgeInsets_right]: 8,
+        [EdgeInsets_top]: 8,
+        [EdgeInsets_left]: 8
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisCount",
+        [_Location_column]: 9,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 9,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisSpacing",
+        [_Location_column]: 9,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSpacing",
+        [_Location_column]: 9,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 9,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "staggeredTileBuilder",
+        [_Location_column]: 9,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26, C[27] || CT.C27, C[28] || CT.C28, C[29] || CT.C29, C[30] || CT.C30, C[31] || CT.C31, C[32] || CT.C32], widget_inspector._Location);
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 30,
+        [_Location_line]: 57,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "exchangeId",
+        [_Location_column]: 17,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 17,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.constList([C[35] || CT.C35, C[36] || CT.C36], widget_inspector._Location);
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[34] || CT.C34,
+        [_Location_name]: null,
+        [_Location_column]: 33,
+        [_Location_line]: 72,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 21,
+        [_Location_line]: 79,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.constList([C[39] || CT.C39], widget_inspector._Location);
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[38] || CT.C38,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 79,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 67,
+        [_Location_line]: 82,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 15,
+        [_Location_line]: 84,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.constList([C[42] || CT.C42, C[43] || CT.C43], widget_inspector._Location);
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[41] || CT.C41,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 80,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 22,
+        [_Location_line]: 88,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 17,
+        [_Location_line]: 89,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.constList([C[46] || CT.C46, C[47] || CT.C47], widget_inspector._Location);
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[45] || CT.C45,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 87,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "alignment",
+        [_Location_column]: 13,
+        [_Location_line]: 86,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.constList([C[50] || CT.C50, C[51] || CT.C51], widget_inspector._Location);
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[49] || CT.C49,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 85,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 9,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.constList([C[54] || CT.C54, C[55] || CT.C55], widget_inspector._Location);
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[53] || CT.C53,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 76,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 7,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 7,
+        [_Location_line]: 93,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.constList([C[58] || CT.C58, C[59] || CT.C59, C[60] || CT.C60], widget_inspector._Location);
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[57] || CT.C57,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///C:/Project/AndroidStudioProjects/coinfav/lib/views/exchanges.dart"
+      });
+    }
+  }, false);
+  var C = Array(61).fill(void 0);
+  var I = ["package:coinfav/views/exchanges.dart"];
+  exchanges.ExchangesPage = class ExchangesPage extends framework.StatefulWidget {
+    createState() {
+      return new exchanges._ExchangesPageState.new();
+    }
+  };
+  (exchanges.ExchangesPage.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    exchanges.ExchangesPage.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = exchanges.ExchangesPage.prototype;
+  dart.addTypeTests(exchanges.ExchangesPage);
+  dart.addTypeCaches(exchanges.ExchangesPage);
+  dart.setMethodSignature(exchanges.ExchangesPage, () => ({
+    __proto__: dart.getMethods(exchanges.ExchangesPage.__proto__),
+    createState: dart.fnType(exchanges._ExchangesPageState, [])
+  }));
+  dart.setLibraryUri(exchanges.ExchangesPage, I[0]);
+  var _list = dart.privateName(exchanges, "_list");
+  var _isLoading = dart.privateName(exchanges, "_isLoading");
+  var _columns = dart.privateName(exchanges, "_columns");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  var EdgeInsets_bottom = dart.privateName(edge_insets, "EdgeInsets.bottom");
+  var EdgeInsets_right = dart.privateName(edge_insets, "EdgeInsets.right");
+  var EdgeInsets_top = dart.privateName(edge_insets, "EdgeInsets.top");
+  var EdgeInsets_left = dart.privateName(edge_insets, "EdgeInsets.left");
+  exchanges._ExchangesPageState = class _ExchangesPageState extends framework.State$(exchanges.ExchangesPage) {
+    fetchData() {
+      return async.async(dart.void, (function* fetchData() {
+        try {
+          let data = (yield api_provider.ApiProvider.fetchExchanges());
+          if (data != null) {
+            this[_list] = data;
+          }
+        } finally {
+          this.setState(dart.fn(() => {
+            this[_isLoading] = false;
+          }, T.VoidTovoid()));
+        }
+      }).bind(this));
+    }
+    initState() {
+      super.initState();
+      this.fetchData();
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: new text.Text.new("Exchanges", {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), actions: T.JSArrayOfWidget().of([new icon_button.IconButton.new({onPressed: dart.fn(() => this.setState(dart.fn(() => {
+                this[_columns] = this[_columns] === 2 ? 1 : 2;
+              }, T.VoidTovoid())), T.VoidTovoid()), icon: new icon.Icon.new(this[_columns] === 1 ? icons.Icons.dashboard : icons.Icons.view_agenda, {$creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6})]), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), body: this[_isLoading] ? new basic.Center.new({child: new progress_indicator.CircularProgressIndicator.new({$creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), $creationLocationd_0dea112b090073317d4: C[16] || CT.C16}) : this.bodyWidget(), $creationLocationd_0dea112b090073317d4: C[19] || CT.C19});
+    }
+    bodyWidget() {
+      return new staggered_grid_view.StaggeredGridView.countBuilder({padding: C[23] || CT.C23, crossAxisCount: this[_columns], itemCount: this[_list][$length], crossAxisSpacing: 16.0, mainAxisSpacing: 16.0, itemBuilder: dart.fn((context, index) => this.cardItemExchanges(this[_list][$_get](index)), T.BuildContextAndintToWidget()), staggeredTileBuilder: dart.fn(index => new staggered_tile.StaggeredTile.fit(1), T.intToStaggeredTile()), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24});
+    }
+    cardItemExchanges(item) {
+      return new elevated_button.ElevatedButton.new({onPressed: dart.fn(() => navigator.Navigator.of(this.context).push(dart.dynamic, new page.MaterialPageRoute.new({builder: dart.fn(context => new markets.MarketsPage.new({exchangeId: item.exchangeId, name: item.name, $creationLocationd_0dea112b090073317d4: C[33] || CT.C33}), T.BuildContextToMarketsPage())})), T.VoidTovoid()), child: new basic.Column.new({crossAxisAlignment: flex.CrossAxisAlignment.start, children: T.JSArrayOfWidget().of([new text.Text.new(item.name, {$creationLocationd_0dea112b090073317d4: C[37] || CT.C37}), new text.Text.new("Volume: " + core.double.parse(item.volumeUsd)[$toStringAsFixed](2) + " USD", {style: new text_style.TextStyle.new({color: colors.Colors.grey._get(400), fontSize: 11.0}), $creationLocationd_0dea112b090073317d4: C[40] || CT.C40}), new basic.Align.new({alignment: alignment.Alignment.centerRight, child: new text.Text.new("% " + core.double.parse(item.percentTotalVolume)[$toStringAsFixed](2), {style: new text_style.TextStyle.new({color: colors.Colors.grey._get(400)}), $creationLocationd_0dea112b090073317d4: C[44] || CT.C44}), $creationLocationd_0dea112b090073317d4: C[48] || CT.C48})]), $creationLocationd_0dea112b090073317d4: C[52] || CT.C52}), style: elevated_button.ElevatedButton.styleFrom({primary: variables.Variables.kSecondaryColor, padding: new edge_insets.EdgeInsets.symmetric({vertical: 20.0, horizontal: 10.0}), shadowColor: variables.Variables.kThirdColor, shape: new rounded_rectangle_border.RoundedRectangleBorder.new({borderRadius: new border_radius.BorderRadius.circular(10.0)})}), $creationLocationd_0dea112b090073317d4: C[56] || CT.C56});
+    }
+  };
+  (exchanges._ExchangesPageState.new = function() {
+    this[_list] = T.JSArrayOfExchangesModel().of([]);
+    this[_isLoading] = true;
+    this[_columns] = 2;
+    exchanges._ExchangesPageState.__proto__.new.call(this);
+    ;
+  }).prototype = exchanges._ExchangesPageState.prototype;
+  dart.addTypeTests(exchanges._ExchangesPageState);
+  dart.addTypeCaches(exchanges._ExchangesPageState);
+  dart.setMethodSignature(exchanges._ExchangesPageState, () => ({
+    __proto__: dart.getMethods(exchanges._ExchangesPageState.__proto__),
+    fetchData: dart.fnType(dart.void, []),
+    build: dart.fnType(framework.Widget, [framework.BuildContext]),
+    bodyWidget: dart.fnType(framework.Widget, []),
+    cardItemExchanges: dart.fnType(framework.Widget, [exchanges_model.ExchangesModel])
+  }));
+  dart.setLibraryUri(exchanges._ExchangesPageState, I[0]);
+  dart.setFieldSignature(exchanges._ExchangesPageState, () => ({
+    __proto__: dart.getFields(exchanges._ExchangesPageState.__proto__),
+    [_list]: dart.fieldType(core.List$(exchanges_model.ExchangesModel)),
+    [_isLoading]: dart.fieldType(core.bool),
+    [_columns]: dart.fieldType(core.int)
+  }));
+  dart.trackLibraries("packages/coinfav/views/exchanges.dart", {
+    "package:coinfav/views/exchanges.dart": exchanges
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["exchanges.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AASuC;IAAqB;;;;;;EAC5D;;;;;;;;;;;;;;;;;;;;;;AAOgB;AACZ;AACM,sBAAO,MAAkB;AAC7B,cAAI,IAAI;AACM,YAAZ,cAAQ,IAAI;;;AAKZ,UAFF,cAAS;AACW,YAAlB,mBAAa;;;MAGnB;;;AAImB,MAAX;AACK,MAAX;IACF;UAG0B;AACxB,YAAO,oCACG,+BACC,kBAAK,gFACH,wBACP,2CACe,cAAM,cAAS;AACY,gBAAhC,iBAAW,AAAS,mBAAG,IAAI,IAAI;0DAE/B,kBAAK,AAAS,mBAAG,IAAU,wBAAkB,+MAGrD,mBACA,6BAAc,6KACd;IAEV;;AAGE,YAAyB,mGAEL,2BACL,AAAM,wCACC,uBACD,mBACJ,SAAC,SAAS,UACd,uBAAkB,AAAK,mBAAC,KAAK,2DAEhB,QAAC,SAAwB,qCAAI;IACzD;sBAEwC;AACtC,YAAO,oDACM,cAAgB,AAAY,uBAAT,iCAAkB,yCACnC,QAAC,WAAY,yCACJ,AAAK,IAAD,mBACV,AAAK,IAAD,6HAEb,0CACkC,yCAC7B,wBACR,kBAAK,AAAK,IAAD,mEACT,kBACI,AAAW,AACyC,aAAzC,AAAsB,kBAAhB,AAAK,IAAD,8BAA4B,KAC7C,gBACG,qCAAwB,AAAI,wBAAC,gBAAgB,mEACxD,gCACuB,wCACd,kBACH,AAAK,OAAS,AAA+B,kBAAzB,AAAK,IAAD,uCAAqC,YACtD,qCAAwB,AAAI,wBAAC,kMAIxB,mDACD,8CACC,gDAAoB,kBAAkB,qBACnC,wCAEnB,uEAAkD,wCAAS;IAGrE;;;IAvFI,cAAwB;IACvB,mBAAa;IACd,iBAAW;;;EAsFjB","file":"../../../../../packages/coinfav/views/exchanges.dart.lib.js"}');
+  // Exports:
+  return {
+    views__exchanges: exchanges
+  };
+}));
+
+//# sourceMappingURL=exchanges.dart.lib.js.map
