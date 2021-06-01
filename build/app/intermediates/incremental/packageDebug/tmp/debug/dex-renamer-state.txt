@@ -1,0 +1,4 @@
+#Mon May 31 13:30:31 TRT 2021
+base.0=C\:\\Project\\AndroidStudioProjects\\coinfav\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

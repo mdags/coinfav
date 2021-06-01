@@ -32,6 +32,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "cached_network_image",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/cached_network_image-3.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "characters",
       "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0",
       "packageUri": "lib/",
@@ -100,6 +106,18 @@
     {
       "name": "flutter",
       "rootUri": "file:///C:/Developer/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_blurhash",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_blurhash-0.6.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_cache_manager",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_cache_manager-3.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -188,6 +206,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "octo_image",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/octo_image-1.0.0+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/path-1.8.0",
       "packageUri": "lib/",
@@ -266,6 +290,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "rxdart",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/rxdart-0.27.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/Developer/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -274,6 +304,18 @@
     {
       "name": "source_span",
       "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/source_span-1.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "sqflite",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite-2.0.0+3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "sqflite_common",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/sqflite_common-2.0.0+2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -304,6 +346,12 @@
     {
       "name": "syncfusion_flutter_core",
       "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-19.1.65",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "synchronized",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/synchronized-3.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -362,6 +410,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "uuid",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/uuid-3.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0",
       "packageUri": "lib/",
@@ -370,6 +424,18 @@
     {
       "name": "web_socket_channel",
       "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/web_socket_channel-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "webfeed",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/webfeed-0.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "webview_flutter",
+      "rootUri": "file:///C:/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/webview_flutter-2.0.8",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -404,7 +470,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-05-28T14:35:19.279635Z",
+  "generated": "2021-05-31T10:32:23.272193Z",
   "generator": "pub",
   "generatorVersion": "2.13.1"
 }

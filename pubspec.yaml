@@ -22,6 +22,9 @@ dependencies:
   flutter_svg:
   auto_size_text_pk:
   flutter_staggered_grid_view:
+  cached_network_image:
+  webview_flutter:
+  webfeed:
 
 dev_dependencies:
   flutter_test:
